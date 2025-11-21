@@ -1,0 +1,19 @@
+services:
+  
+  frontend:
+    build: . 
+    ports:
+      - "8580:80"
+    networks:
+      - container_app_network 
+    labels:
+      - "traefik.enable=true" 
+      - "traefik.http.routers.advent2025.entrypoints=websecure"
+      - "traefik.http.routers.fradvent2025ontend.rule=PathPrefix(`/advent-2025`)"
+      - "traefik.http.routers.advent2025.tls.certresolver=letsencrypt" 
+      - "traefik.http.services.advent2025.loadbalancer.server.port=80"
+      - "traefik.docker.network=container_app_network" 
+
+networks:
+  container_app_network:
+    external: true 

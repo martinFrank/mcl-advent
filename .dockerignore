@@ -1,0 +1,14 @@
+node_modules
+build
+.git
+.gitignore
+.vscode
+.idea
+Dockerfile
+.dockerignore
+docker-compose.yml
+*.log
+*.lock
+.DS_Store
+Thumbs.db
+.env
