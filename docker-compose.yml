@@ -9,6 +9,7 @@ services:
     labels:
       - "traefik.enable=true" 
       - "traefik.http.routers.advent2025.entrypoints=websecure"
+      - "traefik.http.routers.meinservice.rule=Host(`elitegames.v6.rocks`)"
       - "traefik.http.routers.advent2025.rule=PathPrefix(`/advent-2025`)"
       - "traefik.http.routers.advent2025.tls.certresolver=letsencrypt" 
       - "traefik.http.services.advent2025.loadbalancer.server.port=80"
