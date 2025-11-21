@@ -1,0 +1,6 @@
+start prod build:
+$>npm run build
+
+
+start dev build:
+$>npm start
